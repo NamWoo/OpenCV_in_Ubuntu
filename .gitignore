@@ -1,0 +1,7 @@
+.vscode
+*.pyc
+*.o
+*.out
+__pycahe__
+output*
+Result*
