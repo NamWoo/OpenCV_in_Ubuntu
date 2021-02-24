@@ -22,7 +22,9 @@ def computeHist(image, mask=None):
     return np.flipud(h)
 '''
 
-imagePath = "/home/opencv-mds/OpenCV_in_Ubuntu/Data/TrafficLight_Detection/green_light_01.png"
+import os
+home = os.environ['HOME']
+imagePath = home + "/OpenCV_in_Ubuntu/Data/TrafficLight_Detection/green_light_01.png"
 image = imageRead(imagePath) 
 imageShow('image', image)
 imageHist = computeHist(image)
@@ -30,6 +32,7 @@ imageShow("imageHist", imageHist)
 
 imagegray = convertColor(image, cv2.COLOR_BGR2GRAY)
 imageShow('imagegray', imagegray)
+
 imagegrayHist = computeHist(imagegray)
 imageShow("imagegrayHist", imagegrayHist)
 
